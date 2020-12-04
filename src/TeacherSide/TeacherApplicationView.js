@@ -1,14 +1,22 @@
 import React from "react"
-import { SupplyForm } from "./SupplyForm"
+import { SupplyForm } from "./SupplyForm/SupplyForm"
 import { SupplyTypeProvider } from "./SupplyProviders/SupplyTypeProvider"
-
-export const TeacherApplicationView=()=>{
+import {SupplyItemsProvider} from "../TeacherSide/SupplyProviders/SupplyItemsProvider"
+import { SupplyItemForm } from "./SupplyForm/SupplyItemForm"
+export const TeacherApplicationView = () => {
     return (
         <>
-        <SupplyTypeProvider>
-            <SupplyForm/>
-        </SupplyTypeProvider>
-       
+            <SupplyItemsProvider>
+                <SupplyTypeProvider>
+                    <SupplyForm />
+                </SupplyTypeProvider>
+            </SupplyItemsProvider>
+
+            
+
+            
+
+
         </>
     )
 
